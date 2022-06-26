@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+    <h1>Current Cars</h1>
+    <% cars.forEach(car => { %>
+        <tr>
+            <td><%= car.make %> </td>
+            <td><%= car.model %> </td>
+            <td><a href="/cars/<%= car._id %> ">Details</a></td>
+        </tr>
+    <% }) %>
+
+    <% if (user) { %>
+        <form id="add-car"
+        action="/cars/new"
+        method="get">
+            <button type="submit">Add Your Car!</button>
+        </form>
+    <% } %>
+</section>
+
+<%- include('../partials/footer') %>

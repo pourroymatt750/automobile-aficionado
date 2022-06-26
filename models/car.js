@@ -20,6 +20,7 @@ const carSchema = new Schema({
     make: String,
     model: String,
     year: Number,
+    mileage: Number,
     reviews: [reviewSchema]
 }, {
     timestamps: true

@@ -11,6 +11,12 @@
       <h2>Welcome!</h2>
       <% if (user?.profile.avatar) { %>
         <h3>Check out our car collection!</h3>
+        <form 
+        id="car-collection"
+        action="/cars"
+        method="get">
+          <button type="submit">View Collection</button>
+        </form>
         <div>
           <img
             id="avatar"
