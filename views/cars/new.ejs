@@ -1,0 +1,32 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/cars/new.css">
+
+<body>
+    <div class="car-form">
+        <h1>Add Your Car!</h1>
+        <form id="add-your-car" 
+        action="/cars"
+        method="post">
+            <div class="make">
+                <label for="make">Make:</label>
+                <input type="text" name="make" id="make">
+            </div>
+            <div class="model">
+                <label for="model">Model:</label>
+                <input type="text" name="model" id="model">
+            </div>
+            <div class="year">
+                <label for="year">Year:</label>
+                <input type="number" name="year" id="year">
+            </div>
+            <div class="mileage">
+                <label for="mileage">Mileage:</label>
+                <input type="number" name="mileage" id="mileage">
+            </div>
+            <button type="submit">Add Car</button>
+        </form>
+    </div>
+</body>
+
+<%- include('../partials/footer') %>

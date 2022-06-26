@@ -14,12 +14,6 @@ nav {
   justify-content: center;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 #avatar {
   border-radius: 45px;

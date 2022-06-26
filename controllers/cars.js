@@ -15,7 +15,9 @@ function index(req, res) {
 }
 
 function newCar(req, res) {
-    
+    res.render('cars/new', {
+        title: 'Add Car',
+    })
 }
 
 export {

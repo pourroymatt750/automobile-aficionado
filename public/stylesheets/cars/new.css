@@ -1,0 +1,13 @@
+#add-your-car {
+    font-size: 150%;
+}
+
+h1 {
+    margin-bottom: 10%;
+    font-size: 250%;
+}
+
+.make, .model, .year, .mileage {
+    display: block;
+    margin-bottom: 10%;
+}
