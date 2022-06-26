@@ -20,7 +20,36 @@ function newCar(req, res) {
     })
 }
 
+function create(req, res) {
+    req.body.owner = req.user.profile._id
+    Car.create(req.body)
+    .then(car => {
+        res.redirect('/cars')
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
+function show(req, res) {
+    Car.findById(req.params.id)
+    .populate('owner')
+    .then(car => {
+        res.render('cars/show', {
+            title: 'Car Details',
+            car
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
     index,
-    newCar as new
+    newCar as new,
+    create,
+    show
 }

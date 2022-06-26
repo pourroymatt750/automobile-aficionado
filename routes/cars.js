@@ -10,6 +10,12 @@ router.get('/', carsCtrl.index)
 //GET locahost:3000/cars/new
 router.get('/new',isLoggedIn, carsCtrl.new)
 
+//POST localhost:3000/cars
+router.post('/', isLoggedIn, carsCtrl.create)
+
+//GET localhost:3000/car/:id
+router.get('/:id', carsCtrl.show)
+
 export {
     router
 }
