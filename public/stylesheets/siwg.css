@@ -6,10 +6,6 @@
   height: 46px;
 }
 
-.siwg-link {
-  display: inline-block;
-}
-
 .siwg:focus,
 .siwg-link:focus {
   background: url(/images/auth/google/siwg_light_focus.png);

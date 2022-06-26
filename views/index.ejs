@@ -1,7 +1,7 @@
 <%- include('./partials/html-head') %>
 <% if (!user) { %>
-  <link rel="stylesheet" href="/stylesheets/index.css">
   <link rel="stylesheet" href="/stylesheets/siwg.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
 <% } %>
 </head>
 
@@ -9,11 +9,11 @@
   <main>
       <h1>Automobile Aficionado</h1>
       <h2>Welcome!</h2>
-      <h3>Login to continue</h3>
-      <!-- <h1>hello, <%= user ? user.profile.name : "friend" %></h1> -->
       <% if (user?.profile.avatar) { %>
+        <h3>Check out our car collection!</h3>
         <div>
           <img
+            id="avatar"
             src="<%= user.profile.avatar %>"
             alt="<%= user.profile.name %> avatar"
           />
@@ -25,11 +25,14 @@
             <button type="submit">Logout</button>
           </a>
         <% } else { %>
-          <a href="/auth/google" class="siwg-link">
-            <button type="submit" class="siwg">
-              <img id="siwg-image" alt="Sign in with Google" />
-            </button>
-          </a>
+          <div>
+            <h3>Login to continue</h3>
+              <a href="/auth/google" class="siwg-link">
+                <button type="submit" class="siwg">
+                  <img id="siwg-image" alt="Sign in with Google" />
+                </button>
+              </a>
+          </div>
         <% } %>
       </nav>
   </main>

@@ -24,3 +24,9 @@ const carSchema = new Schema({
 }, {
     timestamps: true
 })
+
+const Car = mongoose.model('Car', carSchema)
+
+export {
+    Car
+}
