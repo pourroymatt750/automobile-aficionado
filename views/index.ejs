@@ -15,7 +15,7 @@
         id="car-collection"
         action="/cars"
         method="get">
-          <button type="submit">View Collection</button>
+          <button class="btn btn-success" type="submit">View Collection</button>
         </form>
         <div>
           <img
@@ -28,7 +28,7 @@
       <nav>
         <% if (user) { %>
           <a href="/auth/logout">
-            <button type="submit">Logout</button>
+            <button class="btn btn-warning" type="submit">Logout</button>
           </a>
         <% } else { %>
           <div>
