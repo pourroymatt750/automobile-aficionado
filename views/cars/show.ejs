@@ -9,6 +9,7 @@
     <p><span>Year:</span> <%= car.year %></p>
     <p><span>Mileage:</span> <%= car.mileage %></p>
 
+    <% if (user) { %>
     <form id="leave-review"
     action="/cars/<%= car._id %>/reviews "
     method="post">
@@ -31,6 +32,7 @@
         </div>
         <button type="submit">Leave Review</button>
     </form>
+    <% } %>
 
 <% if (car.reviews.length) { %>
     <table>
