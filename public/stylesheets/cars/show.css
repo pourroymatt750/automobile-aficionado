@@ -1,0 +1,9 @@
+span {
+    font-weight: bold;
+}
+
+.review-rating, .review-content {
+    display: block;
+    margin-bottom: 5%;
+}
+

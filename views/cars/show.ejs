@@ -1,12 +1,36 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/cars/show.css">
 
 <section>
     <h1>Car Details</h1>
-    <p>Make: <%= car.make %></p>
-    <p>Model: <%= car.model %></p>
-    <p>Year: <%= car.year %></p>
-    <p>Mileage: <%= car.mileage %></p>
+    <p><span>Make:</span> <%= car.make %></p>
+    <p><span>Model:</span> <%= car.model %></p>
+    <p><span>Year:</span> <%= car.year %></p>
+    <p><span>Mileage:</span> <%= car.mileage %></p>
+
+    <form id="leave-review"
+    action="/cars/<%= car._id %>/reviews "
+    method="post">
+        <p>Rate on a scale of 1-5 (5 is best)</p>
+        <div class="review-rating">
+            <label for="review-rating">Rating:</label>
+            <select name="rating" id="review-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+            </select>
+        </div>
+        <div class="review-content">
+            <label for="review-content">Review:</label>
+            <textarea type="textarea" name="content" 
+            placeholder="Write your review here" 
+            id="review-content" required></textarea>
+        </div>
+        <button type="submit">Leave Review</button>
+    </form>
 </section>
 
 <%- include('../partials/footer') %>
