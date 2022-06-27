@@ -10,11 +10,14 @@ router.get('/', carsCtrl.index)
 //GET locahost:3000/cars/new
 router.get('/new',isLoggedIn, carsCtrl.new)
 
+//GET localhost:3000/cars/:id
+router.get('/:id', carsCtrl.show)
+
+//GET localhost:3000/cars/:id/edit
+router.get('/:id/edit', isLoggedIn, carsCtrl.edit)
+
 //POST localhost:3000/cars
 router.post('/', isLoggedIn, carsCtrl.create)
-
-//GET localhost:3000/car/:id
-router.get('/:id', carsCtrl.show)
 
 //POST localhost:3000/:id/reviews
 router.post('/:id/reviews',isLoggedIn, carsCtrl.createReview)

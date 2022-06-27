@@ -19,7 +19,7 @@ const reviewSchema = new Schema({
 const carSchema = new Schema({
     make: String,
     model: String,
-    year: Number,
+    year: String,
     mileage: String,
     reviews: [reviewSchema],
     owner: {type: Schema.Types.ObjectId, ref: 'Profile'}

@@ -10,10 +10,16 @@
     <p><span>Year:</span> <%= car.year %></p>
     <p><span>Mileage:</span> <%= car.mileage %></p>
 
+    <% if (car.owner.equals(user?.profile._id)) { %> 
+        <form action="/cars/<%= car._id %>/edit"
+        method="get">
+            <button class="edit-btn" type="submit">Edit</button>
+        </form>
+    <% } %>     
 
     <% if (user) { %>
     <form id="leave-review"
-    action="/cars/<%= car._id %>/reviews "
+    action="/cars/<%= car._id %>/reviews"
     method="post">
         <p>Rate on a scale of 1-5 (5 is best)</p>
         <div class="review-rating">

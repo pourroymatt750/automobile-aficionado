@@ -60,10 +60,25 @@ function createReview(req, res) {
     })
 }
 
+function edit(req, res) {
+    Car.findById(req.params.id)
+    .then(car => {
+        res.render('cars/edit', {
+            title: "Edit Car",
+            car
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
     index,
     newCar as new,
     create,
     show,
-    createReview
+    createReview,
+    edit
 }

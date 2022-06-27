@@ -1,0 +1,27 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<section>
+    <h1>Edit Car Details</h1>
+    <form action="/cars/<%= car._id %>?_method=PUT"
+    method="post">
+    <div class="make">
+        <label for="make">Make:</label>
+        <input type="text" name="make" value="<%= car.make %>" id="make">
+    </div>
+    <div class="model">
+        <label for="model">Model:</label>
+        <input type="text" name="model" value="<%= car.model %>" id="model">
+    </div>
+    <div class="year">
+        <label for="year">Year:</label>
+        <input type="text" name="year" value="<%= car.year %>" id="year">
+    </div>
+    <div class="mileage">
+        <label for="mileage">Mileage:</label>
+        <input type="text" name="mileage" value="<%= car.mileage %>" id="mileage">
+    </div>
+        <button type="submit">Update</button>
+</section>
+
+<%- include('../partials/footer') %>
