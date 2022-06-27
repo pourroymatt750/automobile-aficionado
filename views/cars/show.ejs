@@ -13,12 +13,12 @@
     <% if (car.owner.equals(user?.profile._id)) { %> 
         <form action="/cars/<%= car._id %>/edit"
         method="get">
-            <button class="btn" type="submit">Edit</button>
+            <button class="btn btn-primary" type="submit">Edit</button>
         </form>
 
         <form action="/cars/<%= car._id %>?_method=DELETE"
         method="post">
-            <button class="btn" type="submit">Delete</button>
+            <button class="btn btn-danger" type="submit">Delete</button>
         </form>
     <% } %>     
 
@@ -43,7 +43,7 @@
             placeholder="Write your review here" 
             id="review-content" required></textarea>
         </div>
-        <button type="submit">Leave Review</button>
+        <button class="btn btn-success" type="submit">Leave Review</button>
     </form>
     <% } %>
 
@@ -73,7 +73,7 @@
     <form id="back-btn" 
     action="/cars"
     method="get">
-        <button type="submit">Back</button>
+        <button class="btn btn-dark" type="submit">Back</button>
     </form>
 </footer>
 
