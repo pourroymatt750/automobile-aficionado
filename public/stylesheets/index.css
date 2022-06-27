@@ -16,10 +16,20 @@ h2 {
     color: white;
 }
 
+
+
 h3 {
     font-size: 200%;
     margin-top: 25%;
     color: white;
+}
+
+.check-out {
+    margin-top: 0;
+}
+
+#car-collection {
+    margin-bottom: 5%;
 }
 
 @media only screen and (min-width: 650px) {
