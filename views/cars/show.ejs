@@ -31,6 +31,27 @@
         </div>
         <button type="submit">Leave Review</button>
     </form>
+
+<% if (car.reviews.length) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Rating</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% car.reviews.forEach(function(review) { %>
+            <tr>
+                <td><%= review.rating %></td>
+                <td><%= review.content %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+        </table>
+    <% } else { %>
+        <h3>No Reviews Yet</h3>
+    <% } %>
 </section>
 
 <%- include('../partials/footer') %>

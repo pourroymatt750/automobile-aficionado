@@ -16,6 +16,9 @@ router.post('/', isLoggedIn, carsCtrl.create)
 //GET localhost:3000/car/:id
 router.get('/:id', carsCtrl.show)
 
+//POST localhost:3000/:id/reviews
+router.post('/:id/reviews',isLoggedIn, carsCtrl.createReview)
+
 export {
     router
 }

@@ -47,9 +47,21 @@ function show(req, res) {
     })
 }
 
+function createReview(req, res) {
+    Car.findById(req.params.id)
+    .then(car => {
+        car.reviews.push(req.body)
+        car.save()
+        .then(() => {
+            res.redirect(`/cars/${car._id}`)
+        })
+    })
+}
+
 export {
     index,
     newCar as new,
     create,
-    show
+    show,
+    createReview
 }
