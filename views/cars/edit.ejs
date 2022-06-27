@@ -21,7 +21,14 @@
         <label for="mileage">Mileage:</label>
         <input type="text" name="mileage" value="<%= car.mileage %>" id="mileage">
     </div>
-        <button type="submit">Update</button>
+        <button class="btn btn-primary" type="submit">Update</button>
 </section>
 
+<footer>
+    <form id="back-btn" 
+    action="/cars"
+    method="get">
+        <button class="btn btn-dark" type="submit">Back</button>
+    </form>
+</footer>
 <%- include('../partials/footer') %>

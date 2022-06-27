@@ -4,12 +4,14 @@
 <section>
     <h1>Current Cars</h1>
     <% cars.forEach(car => { %>
-        <tr>
-            <td><%= car.owner?.name %> </td>
-            <td><%= car.make %> </td>
-            <td><%= car.model %> </td>
-            <td><a href="/cars/<%= car._id %> ">Details</a></td>
-        </tr>
+        <div class="card" style="width: 18rem;">
+            <img src="<%= car.owner?.avatar %> " class="card-img-top" alt="avatar">
+            <div class="card-body">
+                <h5 class="card-title"><%= car.owner?.name %></h5>
+                <p class="card-text"><%= car.make %> <%= car.model %></p>
+                <a href="/cars/<%= car._id %> " class="btn btn-primary">Details</a>
+            </div>
+        </div>
     <% }) %>
 
     <% if (user) { %>
