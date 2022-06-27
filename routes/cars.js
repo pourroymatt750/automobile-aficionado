@@ -22,6 +22,12 @@ router.post('/', isLoggedIn, carsCtrl.create)
 //POST localhost:3000/:id/reviews
 router.post('/:id/reviews',isLoggedIn, carsCtrl.createReview)
 
+//PUT localhost:3000/cars/:id
+router.put('/:id', isLoggedIn, carsCtrl.update)
+
+//DELETE localhost:3000/cars/:id
+router.delete('/:id', isLoggedIn, carsCtrl.delete)
+
 export {
     router
 }

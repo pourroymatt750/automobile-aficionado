@@ -74,11 +74,49 @@ function edit(req, res) {
     })
 }
 
+function update(req, res) {
+    Car.findById(req.params.id)
+    .then(car => {
+        if (car.owner.equals(req.user.profile._id)) {
+            car.updateOne(req.body, {new:true})
+            .then(() => {
+                res.redirect(`/cars/${car._id}`)
+            })
+        } else {
+            throw new Error ('Not Authorized')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
+function deleteCar(req, res) {
+    Car.findById(req.params.id)
+    .then(car => {
+        if (car.owner.equals(req.user.profile._id)) {
+            car.delete()
+            .then(() => {
+                res.redirect('/cars')
+            })
+        } else {
+            throw new Error ('Not Authorized')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
     index,
     newCar as new,
     create,
     show,
     createReview,
-    edit
+    edit,
+    update,
+    deleteCar as delete
 }
