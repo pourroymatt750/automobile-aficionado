@@ -22,3 +22,62 @@ h3 {
     color: white;
 }
 
+@media only screen and (min-width: 650px) {
+    h1 {
+        font-size: 300%;
+        margin-top: 5%;
+        color: white;
+    }
+    
+    h2 {
+        font-size: 250%;
+        margin-top: 10%;
+        color: white;
+    }
+    
+    h3 {
+        font-size: 200%;
+        margin-top: 25%;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 350%;
+        margin-top: 5%;
+        color: white;
+    }
+    
+    h2 {
+        font-size: 300%;
+        margin-top: 10%;
+        color: white;
+    }
+    
+    h3 {
+        font-size: 250%;
+        margin-top: 25%;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    h1 {
+        font-size: 400%;
+        margin-top: 5%;
+        color: white;
+    }
+    
+    h2 {
+        font-size: 350%;
+        margin-top: 10%;
+        color: white;
+    }
+    
+    h3 {
+        font-size: 300%;
+        margin-top: 25%;
+        color: white;
+    }
+}
