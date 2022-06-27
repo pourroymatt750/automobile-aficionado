@@ -5,7 +5,8 @@
     <h1>Current Cars</h1>
     <% cars.forEach(car => { %>
         <tr>
-            <td><%=  %> </td>
+            <% console.log(car) %> 
+            <td><%= car.owner?.name %> </td>
             <td><%= car.make %> </td>
             <td><%= car.model %> </td>
             <td><a href="/cars/<%= car._id %> ">Details</a></td>

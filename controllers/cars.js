@@ -2,6 +2,7 @@ import { Car } from "../models/car.js"
 
 function index(req, res) {
     Car.find({})
+    .populate('owner')
     .then(cars => {
         res.render('cars/index', {
             title: 'Car Collection',
@@ -36,6 +37,7 @@ function show(req, res) {
     Car.findById(req.params.id)
     .populate('owner')
     .then(car => {
+        console.log(car)
         res.render('cars/show', {
             title: 'Car Details',
             car

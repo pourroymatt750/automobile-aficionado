@@ -4,10 +4,12 @@
 
 <section>
     <h1>Car Details</h1>
+    <p><span>Owner:</span><%= car.owner?.name  %> </p>
     <p><span>Make:</span> <%= car.make %></p>
     <p><span>Model:</span> <%= car.model %></p>
     <p><span>Year:</span> <%= car.year %></p>
     <p><span>Mileage:</span> <%= car.mileage %></p>
+
 
     <% if (user) { %>
     <form id="leave-review"
