@@ -59,7 +59,7 @@
             <% car.reviews.forEach(function(review) { %>
             <tr>
                 <td><%= review.rating %></td>
-                <td><%= review.content %></td>
+                <td id="review"><%= review.content %></td>
             </tr>
             <% }) %>
         </tbody>
