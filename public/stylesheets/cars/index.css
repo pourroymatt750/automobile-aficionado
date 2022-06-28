@@ -14,8 +14,15 @@ h1 {
     margin-bottom: 5%;
 }
 
-.add-car {
-    margin-bottom: 15%;
+.add-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+#add-your-car, #dream-cars {
+    font-size: 130%;
 }
 
 @media only screen and (min-width: 650px) {

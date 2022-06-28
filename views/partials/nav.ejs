@@ -5,6 +5,7 @@
 <body>
   <nav>
     <% if (user) { %>
+    <div class="top-btns">
       <form id="back-btn" 
       action="/cars"
       method="get">
@@ -13,6 +14,7 @@
       <a href="/auth/logout">
         <button class="btn btn-warning" type="submit">Logout</button>
       </a>
+    </div>  
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
