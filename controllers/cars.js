@@ -6,6 +6,7 @@ function index(req, res) {
     .populate('owner')
     .then(cars => {
         Dreamcar.find({})
+        .populate('owner')
         .then(dreamcars => {
             res.render('cars/index', {
                 title: 'Car Collection',

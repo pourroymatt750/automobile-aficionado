@@ -13,7 +13,8 @@ function newDreamcar(req, res) {
 function create(req, res) {
     req.body.owner = req.user.profile._id
     Dreamcar.create(req.body)
-    .then(car => {
+    .then(dreamcar => {
+        console.log('Creat DREAMCAR:',dreamcar)
         res.redirect('/cars')
     })
     .catch(err => {

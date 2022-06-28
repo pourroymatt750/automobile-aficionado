@@ -33,6 +33,17 @@
         </div>
     <% }) %>
 
+    <% dreamcars.forEach(dreamcar => { %>
+        <div class="card" style="width: 18rem;">
+            <img src="<%= dreamcar.owner?.avatar %> " class="card-img-top" alt="avatar">
+            <div class="card-body">
+                <h5 class="card-title"><%= dreamcar.owner?.name %></h5>
+                <p class="card-text">Dream Car:<%= dreamcar.make %> <%= dreamcar.model %></p>
+                <a href="/cars/<%= dreamcar._id %> " class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    <% }) %>
+
     <% if (user) { %>
         <div class="add-btns">
             <form id="add-car"
