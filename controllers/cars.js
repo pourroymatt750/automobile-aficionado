@@ -9,7 +9,8 @@ function index(req, res) {
         .then(dreamcars => {
             res.render('cars/index', {
                 title: 'Car Collection',
-                cars
+                cars, 
+                dreamcars
             })
         })
     })

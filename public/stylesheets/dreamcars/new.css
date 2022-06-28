@@ -1,0 +1,48 @@
+body {
+    background-image: url(https://imgpile.com/images/R85XBN.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+label {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+#add-your-car {
+    font-size: 150%;
+}
+
+h1 {
+    margin-bottom: 10%;
+    font-size: 250%;
+}
+
+.make, .model, .year, .mileage {
+    display: block;
+    margin-bottom: 10%;
+}
+
+@media only screen and (min-width: 550px) {
+    h1 {
+        margin-bottom: 7.5%;
+    }
+
+    .make, .model, .year, .mileage {
+        margin-bottom: 7.5%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        margin-bottom: 5%;
+    }
+
+    .make, .model, .year, .mileage {
+        margin-bottom: 5%;
+    }
+}
+

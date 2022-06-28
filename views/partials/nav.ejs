@@ -5,16 +5,19 @@
 <body>
   <nav>
     <% if (user) { %>
-    <div class="top-btns">
-      <form id="back-btn" 
-      action="/cars"
-      method="get">
-        <button class="btn btn-dark" type="submit">Back</button>
-      </form>
-      <a href="/auth/logout">
-        <button class="btn btn-warning" type="submit">Logout</button>
-      </a>
-    </div>  
+
+        <form id="back-btn"
+        action="/cars"
+        method="get">
+          <button class="btn btn-dark" type="submit">Back</button>
+        </form>
+  
+        <form id="login-btn"
+        action="/auth/logout"
+        method="get">
+          <button class="btn btn-warning" type="submit">Logout</button>
+        </form>
+
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
