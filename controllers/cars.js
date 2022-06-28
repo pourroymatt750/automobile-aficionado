@@ -1,12 +1,16 @@
 import { Car } from "../models/car.js"
+import { Dreamcar } from "../models/dreamcar.js"
 
 function index(req, res) {
     Car.find({})
     .populate('owner')
     .then(cars => {
-        res.render('cars/index', {
-            title: 'Car Collection',
-            cars
+        Dreamcar.find({})
+        .then(dreamcars => {
+            res.render('cars/index', {
+                title: 'Car Collection',
+                cars
+            })
         })
     })
     .catch(err => {
