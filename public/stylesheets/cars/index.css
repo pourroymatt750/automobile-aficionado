@@ -1,3 +1,9 @@
+body {
+    background-image: url(https://imgpile.com/images/R85Vcc.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
 h1 {
     margin-top: 5%;
     margin-bottom: 5%
