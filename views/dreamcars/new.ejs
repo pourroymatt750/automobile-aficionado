@@ -1,0 +1,25 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<div class="car-form">
+    <h1>Add Your Dream Car!</h1>
+    <form id="add-your-dream-car" 
+    action="/cars"
+    method="post">
+        <div class="make">
+            <label for="make">Make:</label>
+            <input type="text" name="make" id="make">
+        </div>
+        <div class="model">
+            <label for="model">Model:</label>
+            <input type="text" name="model" id="model">
+        </div>
+        <div class="year">
+            <label for="year">Year:</label>
+            <input type="text" name="year" id="year">
+        </div>
+            <button class="btn btn-success" type="submit">Add Car</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>
