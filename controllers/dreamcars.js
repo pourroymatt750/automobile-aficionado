@@ -10,6 +10,19 @@ function newDreamcar(req, res) {
     })
 }
 
+function create(req, res) {
+    req.body.owner = req.user.profile._id
+    Dreamcar.create(req.body)
+    .then(car => {
+        res.redirect('/cars')
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
-    newDreamcar as new
+    newDreamcar as new,
+    create
 }

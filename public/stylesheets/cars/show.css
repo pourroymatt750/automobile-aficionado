@@ -11,4 +11,11 @@ p, label, th, td {
     font-size: 150%;
 }
 
+.edit-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
 

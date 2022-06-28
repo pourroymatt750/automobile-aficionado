@@ -4,22 +4,24 @@
 
 <section>
     <h1>Car Details</h1>
-    <p><span>Owner:</span><%= car.owner?.name  %> </p>
+    <p><span>Owner:</span> <%= car.owner?.name  %></p>
     <p><span>Make:</span> <%= car.make %></p>
     <p><span>Model:</span> <%= car.model %></p>
     <p><span>Year:</span> <%= car.year %></p>
     <p><span>Mileage:</span> <%= car.mileage %></p>
 
     <% if (car.owner.equals(user?.profile._id)) { %> 
-        <form action="/cars/<%= car._id %>/edit"
-        method="get">
-            <button class="btn btn-primary" type="submit">Edit</button>
-        </form>
+        <div class="edit-delete">
+            <form action="/cars/<%= car._id %>/edit"
+            method="get">
+                <button id="edit-btn" class="btn btn-primary" type="submit">Edit</button>
+            </form>
 
-        <form action="/cars/<%= car._id %>?_method=DELETE"
-        method="post">
-            <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
+            <form action="/cars/<%= car._id %>?_method=DELETE"
+            method="post">
+                <button id="delete-btn" class="btn btn-danger" type="submit">Delete</button>
+            </form>
+        </div>
     <% } %>     
 
     <% if (user) { %>
