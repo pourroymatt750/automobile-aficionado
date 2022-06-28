@@ -11,6 +11,8 @@ nav {
   font-size: 100%;
   display: flex;
   justify-content: center;
+  gap: 25px;
+  margin-bottom: 3%;
 }
 
 
@@ -18,4 +20,6 @@ nav {
   border-radius: 45px;
 }
 
-
+#view-collection {
+  font-size: 160%;
+}

@@ -1,5 +1,5 @@
 body {
-    background-image: url(https://imgpile.com/images/R85XBN.jpg);
+    background-image: url(https://imgpile.com/images/R8zvNC.jpg);
     background-size: cover;
     overflow: hidden;
 }
@@ -12,7 +12,7 @@ label {
     padding-right: 1.5%;
 }
 
-#add-your-car {
+#add-your-dream-car {
     font-size: 150%;
 }
 
@@ -26,6 +26,10 @@ h1 {
     margin-bottom: 10%;
 }
 
+#add-dream-car {
+    font-size: 100%;
+}
+
 @media only screen and (min-width: 550px) {
     h1 {
         margin-bottom: 7.5%;
@@ -33,6 +37,10 @@ h1 {
 
     .make, .model, .year, .mileage {
         margin-bottom: 7.5%;
+    }
+
+    #add-dream-car {
+        font-size: 100%;
     }
 }
 
@@ -44,5 +52,14 @@ h1 {
     .make, .model, .year, .mileage {
         margin-bottom: 5%;
     }
+    
+    #add-dream-car {
+        font-size: 110%;
+    }
 }
 
+@media only screen and (min-width: 768px) {
+    #add-dream-car {
+        font-size: 130%;
+    }
+}
