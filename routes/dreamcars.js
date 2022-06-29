@@ -16,6 +16,9 @@ router.get('/:id/edit', isLoggedIn, dreamcarsCtrl.edit)
 //POST localhost:3000/dreamcars
 router.post('/',isLoggedIn, dreamcarsCtrl.create)
 
+//DELETE localhost:3000/dreamcars/:id
+router.delete('/:id', isLoggedIn, dreamcarsCtrl.delete)
+
 export {
     router
 }

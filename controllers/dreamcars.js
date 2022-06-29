@@ -52,9 +52,28 @@ function edit(req, res) {
     })
 }
 
+function deleteDreamCar(req, res) {
+    Dreamcar.findById(req.params.id)
+    .then(dreamcar => {
+        if (dreamcar.owner.equals(req.user.profile._id)) {
+            dreamcar.delete()
+            .then(() => {
+                res.redirect('/cars')
+            })
+        } else {
+            throw new Error ('Not Authorized')
+        }
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
     newDreamcar as new,
     create,
     show,
-    edit
+    edit,
+    deleteDreamCar as delete
 }
