@@ -1,5 +1,6 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/dreamcars/edit.css">
 
 <section>
     <h1>Edit Dream Car Details</h1>
@@ -17,7 +18,7 @@
         <label for="year">Year:</label>
         <input type="text" name="year" value="<%= dreamcar.year %>" id="year">
     </div>
-        <button class="btn btn-primary" type="submit">Update</button>
+        <button id="update-btn" class="btn btn-primary" type="submit">Update</button>
     </form>
 </section>
 <%- include('../partials/footer') %>

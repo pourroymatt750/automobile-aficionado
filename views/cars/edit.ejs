@@ -1,5 +1,6 @@
 <%- include('../partials/html-head') %>
 <%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/cars/edit.css">
 
 <section>
     <h1>Edit Car Details</h1>
@@ -21,7 +22,7 @@
         <label for="mileage">Mileage:</label>
         <input type="text" name="mileage" value="<%= car.mileage %>" id="mileage">
     </div>
-        <button class="btn btn-primary" type="submit">Update</button>
+        <button id="update-btn" class="btn btn-primary" type="submit">Update</button>
     </form>
 </section>
 <%- include('../partials/footer') %>
