@@ -1,6 +1,6 @@
 # Automobile Aficionado 
 
-![a-a-readme](https://user-images.githubusercontent.com/69867050/176540869-561900df-8f8a-4e14-b98b-fe089a3576ed.jpeg)
+![a-a-bg-pic](https://user-images.githubusercontent.com/69867050/176549836-b5dc81c9-9733-4836-ae86-db60c7020ee2.jpg)
 
 This is an application that allows users to add both their car and their dream car, and stores all of the cars in the app as a car collection. It has full CRUD capabilites with users being able to add their car, read their car once it's added, update the information they entered about their car, and delete their car if they so choose. Users are also allowed to leave a review on both their car, their dream car, or other user's cars/dream cars. This app is responsive and works on all size screens. 
 
