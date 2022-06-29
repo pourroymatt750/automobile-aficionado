@@ -43,7 +43,6 @@ function show(req, res) {
     Car.findById(req.params.id)
     .populate('owner')
     .then(car => {
-        console.log(car)
         res.render('cars/show', {
             title: 'Car Details',
             car

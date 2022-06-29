@@ -38,8 +38,23 @@ function show(req, res) {
     })
 }
 
+function edit(req, res) {
+    Dreamcar.findById(req.params.id)
+    .then(dreamcar => {
+        res.render('dreamcars/edit', {
+            title: "Edit Your Dream Car",
+            dreamcar
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
     newDreamcar as new,
     create,
-    show
+    show,
+    edit
 }
