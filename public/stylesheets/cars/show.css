@@ -31,3 +31,10 @@ p, label, th, td {
 #leave-review {
     font-size: 110%;
 }
+
+table, tr, th, td {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
