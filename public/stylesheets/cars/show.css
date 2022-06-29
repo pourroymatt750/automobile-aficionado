@@ -32,9 +32,15 @@ p, label, th, td {
     font-size: 110%;
 }
 
-table, tr, th, td {
+table {
+    table-layout: fixed;
+    width: 100%;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
+}
+
+th, td {
+    padding: 10px;
 }
 
