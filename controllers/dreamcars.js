@@ -70,10 +70,22 @@ function deleteDreamCar(req, res) {
     })
 }
 
+function createReview(req, res) {
+    Dreamcar.findById(req.params.id)
+    .then(dreamcar => {
+        dreamcar.reviews.push(req.body)
+        dreamcar.save()
+        .then(() => {
+            res.redirect(`/dreamcars/${dreamcar._id}`)
+        })
+    })
+}
+
 export {
     newDreamcar as new,
     create,
     show,
     edit,
-    deleteDreamCar as delete
+    deleteDreamCar as delete,
+    createReview 
 }
