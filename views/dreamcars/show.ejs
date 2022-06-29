@@ -1,0 +1,73 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<link rel="stylesheet" href="/stylesheets/cars/show.css">
+
+<section>
+    <h1>Dream Car Details</h1>
+    <p><span>Owner:</span> <%= dreamcar.owner?.name  %></p>
+    <p><span>Make:</span> <%= dreamcar.make %></p>
+    <p><span>Model:</span> <%= dreamcar.model %></p>
+    <p><span>Year:</span> <%= dreamcar.year %></p>
+
+    <% if (dreamcar.owner.equals(user?.profile._id)) { %> 
+        <div class="edit-delete">
+            <form action="/dreamcars/<%= dreamcar._id %>/edit"
+            method="get">
+                <button id="edit-btn" class="btn btn-primary" type="submit">Edit</button>
+            </form>
+
+            <form action="/dreamcars/<%= dreamcar._id %>?_method=DELETE"
+            method="post">
+                <button id="delete-btn" class="btn btn-danger" type="submit">Delete</button>
+            </form>
+        </div>
+    <% } %>     
+
+    <% if (user) { %>
+    <form id="leave-review"
+    action="/dreamcars/<%= dreamcar._id %>/reviews"
+    method="post">
+        <p>Rate on a scale of 1-5 (5 is best)</p>
+        <div class="review-rating">
+            <label for="review-rating">Rating:</label>
+            <select name="rating" id="review-rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+            </select>
+        </div>
+        <div class="review-content">
+            <label for="review-content">Review:</label>
+            <textarea type="textarea" name="content" 
+            placeholder="Write your review here" 
+            id="review-content" required></textarea>
+        </div>
+        <button id="leave-review" class="btn btn-success" type="submit">Leave Review</button>
+    </form>
+    <% } %>
+
+<% if (dreamcar.reviews.length) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Rating</th>
+                <th>Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% dreamcar.reviews.forEach(function(review) { %>
+            <tr>
+                <td><%= review.rating %></td>
+                <td id="review"><%= review.content %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+        </table>
+    <% } else { %>
+        <h3>No Reviews Yet</h3>
+    <% } %>
+</section>
+
+<%- include('../partials/footer') %>

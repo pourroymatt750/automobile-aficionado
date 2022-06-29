@@ -23,7 +23,23 @@ function create(req, res) {
     })
 }
 
+function show(req, res) {
+    Dreamcar.findById(req.params.id)
+    .populate('owner')
+    .then(dreamcar => {
+        res.render('dreamcars/show', {
+            title: 'Dream Car Details',
+            dreamcar
+        })
+    })
+    .catch(err => {
+        console.log(err)
+        res.redirect('/cars')
+    })
+}
+
 export {
     newDreamcar as new,
-    create
+    create,
+    show
 }
