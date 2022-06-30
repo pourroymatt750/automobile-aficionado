@@ -26,6 +26,10 @@ h1 {
     margin-bottom: 10%;
 }
 
+#add-car {
+    font-size: 110%;
+}
+
 @media only screen and (min-width: 550px) {
     h1 {
         margin-bottom: 7.5%;
@@ -33,7 +37,6 @@ h1 {
 
     .make, .model, .year, .mileage {
         margin-bottom: 7.5%;
-        max-width: 90%;
     }
 
     #add-car {
@@ -48,11 +51,10 @@ h1 {
 
     .make, .model, .year, .mileage {
         margin-bottom: 5%;
-        max-width: 90%;
     }
 
     #add-car {
-    font-size: 110%;
+    font-size: 120%;
     }
 }
 
