@@ -33,15 +33,12 @@ h1 {
 
     .make, .model, .year, .mileage {
         margin-bottom: 7.5%;
+        max-width: 90%;
     }
-}
 
-label {
-    font-size: 90%;
-}
-
-#add-car {
+    #add-car {
     font-size: 100%;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -51,11 +48,12 @@ label {
 
     .make, .model, .year, .mileage {
         margin-bottom: 5%;
+        max-width: 90%;
     }
-}
 
-#add-car {
+    #add-car {
     font-size: 110%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
