@@ -6,7 +6,7 @@ This is an application that allows users to add both their car and their dream c
 
 ## View Automobile Aficionado [Here](https://automobile-aficionado.herokuapp.com/)
 
-### View Planning Steps [Here](https://trello.com/b/VBfxoeYM/automobile-aficionado)
+## View Planning Steps [Here](https://trello.com/b/VBfxoeYM/automobile-aficionado)
 
 ## Technologies Used:
 - HTML/EJS
@@ -15,6 +15,9 @@ This is an application that allows users to add both their car and their dream c
 - Node.js 
 - Bootstrap 
 - Heroku 
+- Express
+- Mongoose 
+- VS Code
 
 ## Ice Box:
 - API use in future applications
