@@ -20,6 +20,21 @@
         <% } %>
     </nav>
 
+    <% if (user) { %>
+        <div class="add-btns">
+            <form id="add-car"
+            action="/cars/new"
+            method="get">
+                <button id="add-your-car" class="btn btn-success" type="submit">Add Your Car</button>
+            </form>
+        
+            <form id="add-dream-car"
+            action="/dreamcars/new">
+                <button id="dream-cars" class="btn btn-primary" type="submit">Dream Cars</button>
+            </form>
+        </div>  
+    <% } %>
+
 <section>
     <h1>All Our Cars</h1> 
     <% cars.forEach(car => { %>
@@ -43,20 +58,5 @@
             </div>
         </div>
     <% }) %>
-
-    <% if (user) { %>
-        <div class="add-btns">
-            <form id="add-car"
-            action="/cars/new"
-            method="get">
-                <button id="add-your-car" class="btn btn-success" type="submit">Add Your Car</button>
-            </form>
-        
-            <form id="add-dream-car"
-            action="/dreamcars/new">
-                <button id="dream-cars" class="btn btn-primary" type="submit">Dream Cars</button>
-            </form>
-        </div>  
-    <% } %>
 </section>
 <%- include('../partials/footer') %>
