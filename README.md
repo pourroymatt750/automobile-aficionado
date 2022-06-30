@@ -6,8 +6,6 @@ This is an application that allows users to add both their car and their dream c
 
 ## View Automobile Aficionado [Here](https://automobile-aficionado.herokuapp.com/)
 
-![new-a-a-wireframe](https://user-images.githubusercontent.com/69867050/176746668-b325443f-5139-4829-9567-8dc5375118be.jpeg)
-
 ## View Planning Steps [Here](https://trello.com/b/VBfxoeYM/automobile-aficionado)
 
 ## Technologies Used:
