@@ -15,11 +15,16 @@ nav {
   margin-bottom: 3%;
 }
 
-
 #avatar {
   border-radius: 45px;
 }
 
 #view-collection {
   font-size: 160%;
+}
+
+input {
+  border-radius: 15px;
+  border: none;
+  text-align: center;
 }
