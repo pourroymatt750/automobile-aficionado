@@ -6,19 +6,19 @@
     <h1>Edit Dream Car Details</h1>
     <form action="/dreamcars/<%= dreamcar._id %>?_method=PUT"
     method="post">
-    <div class="make">
-        <label for="make">Make:</label>
-        <input type="text" name="make" value="<%= dreamcar.make %>" id="make" size="18">
-    </div>
-    <div class="model">
-        <label for="model">Model:</label>
-        <input type="text" name="model" value="<%= dreamcar.model %>" id="model" size="17">
-    </div>
-    <div class="year">
-        <label for="year">Year:</label>
-        <input type="text" name="year" value="<%= dreamcar.year %>" id="year" size="18">
-    </div>
-        <button id="update-btn" class="btn btn-primary" type="submit">Update</button>
+        <div class="make">
+            <label for="make">Make:</label>
+            <input type="text" name="make" value="<%= dreamcar.make %>" id="make" size="18">
+        </div>
+        <div class="model">
+            <label for="model">Model:</label>
+            <input type="text" name="model" value="<%= dreamcar.model %>" id="model" size="17">
+        </div>
+        <div class="year">
+            <label for="year">Year:</label>
+            <input type="text" name="year" value="<%= dreamcar.year %>" id="year" size="18">
+        </div>
+            <button id="update-btn" class="btn btn-primary" type="submit">Update</button>
     </form>
 </section>
 <%- include('../partials/footer') %>

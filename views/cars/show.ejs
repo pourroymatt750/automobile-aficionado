@@ -59,16 +59,16 @@
         </thead>
         <tbody>
             <% car.reviews.forEach(function(review) { %>
-            <tr>
-                <td><%= review.rating %></td>
-                <td id="review"><%= review.content %></td>
-            </tr>
+                <tr>
+                    <td><%= review.rating %></td>
+                    <td id="review"><%= review.content %></td>
+                </tr>
             <% }) %>
         </tbody>
-        </table>
-    <% } else { %>
-        <h3>No Reviews Yet</h3>
-    <% } %>
+    </table>
+<% } else { %>
+    <h3>No Reviews Yet</h3>
+<% } %>
 </section>
 
 <%- include('../partials/footer') %>

@@ -48,22 +48,22 @@
     </form>
     <% } %>
 
-<% if (dreamcar.reviews.length) { %>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Rating</th>
-                <th>Review</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% dreamcar.reviews.forEach(function(review) { %>
+    <% if (dreamcar.reviews.length) { %>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Rating</th>
+                    <th>Review</th>
+                </tr>
+            </thead>
+            <tbody>
+        <% dreamcar.reviews.forEach(function(review) { %>
             <tr>
                 <td><%= review.rating %></td>
                 <td id="review"><%= review.content %></td>
             </tr>
-            <% }) %>
-        </tbody>
+        <% }) %>
+            </tbody>
         </table>
     <% } else { %>
         <h3>No Reviews Yet</h3>
